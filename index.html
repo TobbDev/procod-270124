@@ -14,10 +14,6 @@
         margin: 50px;
         text-align: center;
       }
-      header img {
-        width: 50px;
-        height: 50px;
-      }
       header .container h1 {
         font-size: 70px;
         display: inline-block;
@@ -30,7 +26,8 @@
         border: none;
         font-size: 21px;
       }
-      input.submit-btn, input.search-box {
+      input.submit-btn,
+      input.search-box {
         background-color: rgb(237, 237, 237);
         padding: 5px;
       }
@@ -41,20 +38,94 @@
         cursor: pointer;
         height: 50px;
       }
+
+      header .btn-section {
+        padding: 25px;
+        font-size: 19px;
+      }
+      header .btn-section a {
+        float: right;
+        text-decoration: none;
+        color: grey;
+        margin: 0 15px;
+        padding: 10px;
+        transition: 0.3s;
+      }
+      header .btn-section a:hover {
+        color: rgb(226, 226, 226);
+      }
+      header .btn-section a.sign-in {
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+      }
+      header .btn-section a.sign-in:hover {
+        background-color: rgb(0, 136, 255);
+      }
+      header .btn-section div.wpp-google {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid blue;
+        background-image: url(estetik-wpp.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      header .btn-section section.clear {
+        clear: both;
+      }
+
+      @media screen and (max-width: 600px) {
+        header .container h1 {
+          font-size: 55px;
+        }
+        header .btn-section a {
+          float: left;
+          padding: 8px;
+          margin: 3px;
+          font-size: 15px;
+        }
+        header .btn-section .wpp-google {
+          float: right;
+        }
+        header .container form input .search-box {
+          width: 200px;
+        }
+        header .btn-section a.addition {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
     <header>
+      <div class="btn-section">
+        <a class="sign-in" href="">Sign In</a>
+        <a href="" class="addition">🧪</a>
+        <a href="" class="addition">🗃️</a>
+        <a href="">Images</a>
+        <a href="">Gmail</a>
+        <div class="wpp-google"></div>
+        <section class="clear"></section>
+      </div>
       <div class="container">
-        <img title="Founder Google" src="larry-page.png" alt="">
         <h1>
-          G<span style="color: aqua">o</span
-          ><span style="color: palevioletred">o</span
-          ><span style="color: red">g</span>le
+          <span style="color: rgb(0, 225, 255)">G</span
+          ><span style="color: rgb(206, 16, 16)">o</span
+          ><span style="color: rgb(221, 221, 18)">o</span
+          ><span style="color: rgb(0, 225, 255)">g</span
+          ><span style="color: green">l</span
+          ><span style="color: rgb(206, 16, 16)">e</span>
         </h1>
         <form target="_blank" action="https://www.google.com/search">
-          <input  class="submit-btn" type="submit" value="🔍" />
-          <input class="search-box" type="text" name="query" placeholder="Search" />
+          <input
+            class="search-box"
+            type="text"
+            name="query"
+            placeholder="Search"
+          />
+          <input class="submit-btn" type="submit" value="🔍" />
         </form>
       </div>
     </header>
